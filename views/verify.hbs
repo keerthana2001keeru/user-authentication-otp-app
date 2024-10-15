@@ -1,0 +1,132 @@
+
+
+
+<style>
+ 
+.form-style input{
+	border:0;
+	height:50px;
+	border-radius:0;
+  color: #000000;
+border-bottom:1px solid #ebebeb;	
+}
+.form-style input:focus{
+border-bottom:1px solid #007bff;	
+box-shadow:none;
+outline:0;
+color: #000000;
+background-color:#ebebeb;	
+}
+.sideline {
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+	color:#000000;
+}
+button{
+height:50px;	
+}
+.sideline:before,
+.sideline:after {
+    content: '';
+    border-top: 1px solid #ebebeb;
+    margin: 0 20px 0 0;
+    flex: 1 0 20px;
+}
+
+.sideline:after {
+    margin: 0 0 0 20px;
+}
+</style>
+
+<script src="https://use.fontawesome.com/f59bcd8580.js"></script>
+ {{>userHeader}}
+<div class="container">
+  
+  <div class="row m-5 no-gutters justify-content-center">
+   
+    <div class="col-lg-6 border border-light shadow-lg p-5">
+      <h2 class="pb-3 fw-bolder"></h2>
+      <div class="form-style">
+        {{!-- <form method="post" action="/login">
+          <div class="form-group pb-3">
+            <input
+              type="email"
+              placeholder="Email"
+              name="email"
+              value="{{formData.email}}"
+              required
+              class="form-control"
+              id="exampleInputEmail1"
+              aria-describedby="emailHelp"
+            />
+          </div>
+          <div class="form-group pb-3">
+            <input
+              type="password"
+              name="password"
+              value="{{formData.password}}"
+              required
+              placeholder="Password"
+              class="form-control"
+              id="exampleInputPassword1"
+            />
+          </div>
+         
+          <div class="pb-2">
+            <button
+              type="submit"
+              class="btn btn-dark w-100 font-weight-bold mt-2"
+            >Submit</button>
+          </div>
+        </form> --}}
+       <section class="login_part section_padding ">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="">
+                    <div class="login_part_text text-center">
+                        <div class="login_part_text_iner">
+                            
+                            <p>An OTP has been send to you email address.<br>
+                                 Please check your email</p>
+                            <a href="/signup" class="btn_3">Back to signup page</a>
+                        </div>
+                    </div>
+                </div>
+              
+                <div class="">
+                    <div class="login_part_form">
+                        <div class="login_part_form_iner">
+                            
+                            <form class="row contact_form" method="post" action="/verify-otp">
+                                <div class="col-md-12 form-group p_star">
+                                    <input type="text" class="form-control" id="otpvalue" name="otpvalue" value=""
+                                        placeholder="Enter OTP">
+                                </div>
+                                <div class="col-md-12 form-group">
+                                    <span id="verifyotpspan"></span>
+                                    <button type="submit" value="submit" class="btn_3 btn btn-dark w-100 font-weight-bold mt-2">
+                                        Verify OTP
+                                    </button>
+                                    <a href="/resendOtp" class="btn_3 btn border-0">
+                                        Resend OTP
+                                    </a>
+                                    {{!--  --}}
+                                </div>
+                            </form>
+                            <div id="countdown" class="text-center"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+      
+        
+      </div>
+
+    </div>
+  </div>
+</div>
