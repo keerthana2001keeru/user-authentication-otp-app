@@ -1,9 +1,5 @@
 const mongoose = require("mongoose");
 
-
-
-
-
 const userSchema = new mongoose.Schema(
   {
     fullName: {
@@ -74,10 +70,7 @@ const userSchema = new mongoose.Schema(
   { timestamps: true }
 );
 
-   
   
-
-//const Address = mongoose.model("Address", addressSchema);
 const User =  mongoose.model("Users", userSchema)
 module.exports = { User };
 
